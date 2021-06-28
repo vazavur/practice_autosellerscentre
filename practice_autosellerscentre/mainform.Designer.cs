@@ -39,6 +39,8 @@ namespace practice_autosellerscentre
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exitTB = new System.Windows.Forms.Button();
+            this.copyToExcelButton = new System.Windows.Forms.Button();
+            this.reserveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,7 @@ namespace practice_autosellerscentre
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(829, 211);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -111,11 +114,33 @@ namespace practice_autosellerscentre
             this.exitTB.UseVisualStyleBackColor = true;
             this.exitTB.Click += new System.EventHandler(this.exitTB_Click);
             // 
+            // copyToExcelButton
+            // 
+            this.copyToExcelButton.Location = new System.Drawing.Point(344, 230);
+            this.copyToExcelButton.Name = "copyToExcelButton";
+            this.copyToExcelButton.Size = new System.Drawing.Size(218, 43);
+            this.copyToExcelButton.TabIndex = 2;
+            this.copyToExcelButton.Text = "Копировать в Excel";
+            this.copyToExcelButton.UseVisualStyleBackColor = true;
+            this.copyToExcelButton.Click += new System.EventHandler(this.copyToExcelButton_Click);
+            // 
+            // reserveButton
+            // 
+            this.reserveButton.Location = new System.Drawing.Point(569, 230);
+            this.reserveButton.Name = "reserveButton";
+            this.reserveButton.Size = new System.Drawing.Size(272, 43);
+            this.reserveButton.TabIndex = 3;
+            this.reserveButton.Text = "Бронирование автомобиля";
+            this.reserveButton.UseVisualStyleBackColor = true;
+            this.reserveButton.Click += new System.EventHandler(this.reserveButton_Click);
+            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 285);
+            this.Controls.Add(this.reserveButton);
+            this.Controls.Add(this.copyToExcelButton);
             this.Controls.Add(this.exitTB);
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainform";
@@ -137,5 +162,7 @@ namespace practice_autosellerscentre
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn VIN;
         private System.Windows.Forms.Button exitTB;
+        private System.Windows.Forms.Button copyToExcelButton;
+        private System.Windows.Forms.Button reserveButton;
     }
 }
